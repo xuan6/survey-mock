@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Xuan's Practice</title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+	<script id="hidden-question" type="text/x-custom-template">
+
+	<div class="panel-group">
+
+				<div class="panel panel-default" id="questionOne">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<div class = "row">
+							<h4 class="col-lg-2 panel-title">
+								<a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Question #1
+								</a>
+							</h4>
+							<button class="col-lg-1 col-lg-offset-9 btn btn-danger question-delete" type="button">
+								Delete
+							</button>
+						</div>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+
+						<div class="panel-body">
+
+							<div class = "row">
+								<div class="col-lg-10 col-lg-offset-1">
+									<div class="input-group question-title">
+										<span class="input-group-addon" id="basic-addon1">Question</span>
+										<input type="text" class="form-control" placeholder="Title" aria-label="...">
+										<div class="input-group-btn">
+											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type <span class="caret"></span></button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="#">Multiple Select</a></li>
+												<li><a href="#">Single Select</a></li>
+											</ul>
+										</div><!-- /btn-group -->
+									</div><!-- /input-group -->
+								</div><!-- /.col-lg-6 -->
+							</div><!-- .row -->
+
+
+							<div class = "row option" id="optionOne"><!--option-->
+								<div class="col-lg-10 col-lg-offset-1">
+									<div class="input-group">
+										<div class="input-group-btn">
+											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Option Type <span class="caret"></span></button>
+											<ul class="dropdown-menu dropdown-menu-left">
+												<li><a href="#">May Select</a></li>
+												<li><a href="#">Must Select</a></li>
+												<li><a href="#">Terminate if Select</a></li>
+											</ul>
+										</div><!-- /btn-group -->
+
+										<input type="text" class="form-control" placeholder="Enter anwser option" aria-label="...">
+										<div class="input-group-btn">
+											<button class=" btn btn-default option-delete" type="button">
+												<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+											</button>
+
+										</div><!-- /btn-group -->
+									</div><!-- /input-group -->
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+
+
+
+							<div class = "row confirmation">
+								<div class ="col-lg-3 col-lg-offset-5">
+									<button type="button" class="btn btn-warning btn-sm">
+										<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel
+									</button>
+									<button type="button" class="btn btn-success btn-sm">
+										<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save
+									</button>
+								</div>
+							</div>
+						</div><!--collaspse body-->
+					</div>
+				</div><!--panel-->
+
+
+
+	
+
+	</script>
+
+	<script id="hidden-option" type="text/x-custom-template">
+	<div class = "row option"><!--option-->
+		<div class="col-lg-10 col-lg-offset-1">
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Option Type <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-left">
+					<li><a href="#">May Select</a></li>
+					<li><a href="#">Must Select</a></li>
+					<li><a href="#">Terminate if Select</a></li>
+					</ul>
+				</div><!-- /btn-group -->
+
+				<input type="text" class="form-control" placeholder="Enter anwser option" aria-label="...">
+				<div class="input-group-btn">
+					<button class=" btn btn-default option-delete" type="button">
+					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+				</button>
+
+				</div><!-- /btn-group -->
+			</div><!-- /input-group -->
+		</div><!-- /.col -->
+	</div><!-- /.row -->
+	</script>
+
+
+
+</head>
+
+
+
+<body>
+
+	<div class="container" role="main">
+		<div class = "row">
+			<div class="col-lg-6">
+				<h1>Edit Questions</h1>
+			</div>
+		</div>
+
+		<a href="test.html">jump</a>
+		<button class="addOption">add option</button>
+		<button class="addQuestion">add question</button>
+
+
+		
+			<div class="panel-group">
+
+				<div class="panel panel-default" id="questionOne">
+					<div class="panel-heading" role="tab" id="headingOne">
+						<div class = "row">
+							<h4 class="col-lg-2 panel-title">
+								<a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Question #1
+								</a>
+							</h4>
+							<button class="col-lg-1 col-lg-offset-9 btn btn-danger question-delete" type="button">
+								Delete
+							</button>
+						</div>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+
+						<div class="panel-body">
+
+							<div class = "row">
+								<div class="col-lg-10 col-lg-offset-1">
+									<div class="input-group question-title">
+										<span class="input-group-addon" id="basic-addon1">Question</span>
+										<input type="text" class="form-control" placeholder="Title" aria-label="...">
+										<div class="input-group-btn">
+											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type <span class="caret"></span></button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="#">Multiple Select</a></li>
+												<li><a href="#">Single Select</a></li>
+											</ul>
+										</div><!-- /btn-group -->
+									</div><!-- /input-group -->
+								</div><!-- /.col-lg-6 -->
+							</div><!-- .row -->
+
+
+							<div class = "row option" id="optionOne"><!--option-->
+								<div class="col-lg-10 col-lg-offset-1">
+									<div class="input-group">
+										<div class="input-group-btn">
+											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Option Type <span class="caret"></span></button>
+											<ul class="dropdown-menu dropdown-menu-left">
+												<li><a href="#">May Select</a></li>
+												<li><a href="#">Must Select</a></li>
+												<li><a href="#">Terminate if Select</a></li>
+											</ul>
+										</div><!-- /btn-group -->
+
+										<input type="text" class="form-control" placeholder="Enter anwser option" aria-label="...">
+										<div class="input-group-btn">
+											<button class=" btn btn-default option-delete" type="button">
+												<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+											</button>
+
+										</div><!-- /btn-group -->
+									</div><!-- /input-group -->
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+
+
+
+							<div class = "row confirmation">
+								<div class ="col-lg-3 col-lg-offset-5">
+									<button type="button" class="btn btn-warning btn-sm">
+										<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel
+									</button>
+									<button type="button" class="btn btn-success btn-sm">
+										<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Save
+									</button>
+								</div>
+							</div>
+						</div><!--collaspse body-->
+					</div>
+				</div><!--panel-->
+
+
+				
+			</div><!--panel group-->
+
+
+			</div>
+
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="jquery-3.1.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+
+  <script src="js/jquery-ui.js"></script>
+
+	<script src="js/custom-js.js"></script>
+
+</body>
+</html>

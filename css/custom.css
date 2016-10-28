@@ -1,0 +1,31 @@
+.row{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+/*.collapse{
+	margin-top: 2%;
+}*/
+
+.input-group{
+	margin-bottom: 0.5%;
+}
+
+.question-title{
+	margin-bottom: 2%;
+}
+
+
+.confirmation{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+#dragPanelList .panel-heading {
+        cursor: move;
+    }
+
+#draggablePanelList .panel-heading {
+        cursor: move;
+    }
+
