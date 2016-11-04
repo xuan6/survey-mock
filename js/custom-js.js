@@ -1,35 +1,13 @@
 'use strict';
 
-// $(function() {
-//     var panelList = $('#dragPanelList');
+var countQuestion = 1;
 
-//     panelList.sortable({
-//         // Only make the .panel-heading child elements support dragging.
-//         // Omit this to make then entire <li>...</li> draggable.
-//         handle: '.panel-heading', 
-//         update: function() {
-//             $('.panel', panelList).each(function(index, elem) {
-//                  var $listItem = $(elem),
-//                      newIndex = $listItem.index();
-
-//                  // Persist the new indices.
-//             });
-//         }
-//     });
-//     panelList.disableSelection();
-// });
-
-
-// $( function() {
-//     $( "#dragPanelList" ).sortable();
-//     $( "#dragPanelList" ).disableSelection();
-//   } );
 
  $( function() {
-    $( ".panel-group" ).sortable({
-      connectWith: ".panel-group",
-      handle: ".panel-heading",
-      cancel: ".btn",
+    $( '.panel-group' ).sortable({
+      connectWith: '.panel-group',
+      handle: '.panel-heading',
+      cancel: '.btn',
       // update: function() {
       //       $('.panel', panelList).each(function(index, elem) {
       //            var $listItem = $(elem),
@@ -44,29 +22,50 @@
   } );
 
 
+//add question
+var questionTemplate = $('#hidden-question').html();
+$('button.add-question').click(function(){
+	$('.panel-group').append(questionTemplate);
+  countQuestion = countQuestion + 1;
+  $('#new-panel').attr('id','qustion'+countQuestion);
+  var newPanel = $('#qustion'+countQuestion)
+  newPanel.find('.panel-heading').attr('id','heading'+countQuestion);
 
-
-// var panelTemplate = $('#hidden-template').html();
-
-// $("button.add").click(function(){
-// 	$(".panel-group").append(template)
-// })
+  newPanel.find('h4 a').text('Question #' + countQuestion);
+  newPanel.find('h4 a').attr('href', '#collapse' + countQuestion);
+  newPanel.find('.panel-collapse').attr('id','collapse'+countQuestion);
+})
 
 var optionTemplate = $('#hidden-option').html();
-$("button.addOption").click(function(){
-	$(".confirmation").before(optionTemplate)
-})
+
+//add option
+$('.container').on('click' ,'button.add-option',function(){
+  $(this).closest('.add-button').before(optionTemplate);
+});
+
+//remove question
+$('.container').on('click' ,'button.question-delete',function(){
+  $(this).closest('.question').remove();
+  countQuestion = countQuestion - 1;
+});
+
+//remove option
+$('.container').on('click' ,'button.option-delete',function(){
+  $(this).closest('.option').remove();
+});
 
 
-var questionTemplate = $('#hidden-question').html();
-$("button.addQuestion").click(function(){
-	$(".panel-group").append(questionTemplate)
-})
+//selected from dropdown
+// $('container').on('click', 'ul.dropdown-menu li a', function(){ 
+//   var selText = $(this).text();
+//   $(this).closest('.dropdown-toggle').text(selText+'<span class="caret"></span>');
+//   // $(this).closest('.dropdown-toggle').html(selText+'<span class="caret"></span>');
+//   //$('#selected').text($(this).text());
+//   // $('#selected').value($(this).value());
+// });
 
-$("button.question-delete").click(function(){
-	$(this).closest(".question").remove();
-})
+// $('.dropdown-menu li a').click(function(){
+//   var selText = $(this).text();
+//   $(this).closest('button.dropdown-toggle').text(selText+'<span class="caret"></span>');
+// })
 
-$("button.option-delete").click(function(){
-	$(this).closest(".option").remove();
-})

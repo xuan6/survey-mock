@@ -1,6 +1,17 @@
+h1{
+	margin-bottom: 2%;
+}
+
 .row{
 	margin-left: 2%;
 	margin-right: 2%;
+}
+
+.col-center-block{
+	float: none;  
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
 }
 
 /*.collapse{
@@ -16,9 +27,18 @@
 }
 
 
+.add-option{
+	margin-top: 3%;
+}
+
+
 .confirmation{
 	margin-top: 2%;
 	margin-bottom: 2%;
+}
+
+.finish{
+	margin: auto;
 }
 
 #dragPanelList .panel-heading {
